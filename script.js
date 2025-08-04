@@ -1,10 +1,11 @@
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-window.addEventListener("load", () => {
+window.addEventListener("load", function () {
   const loader = document.getElementById("loader");
   loader.style.display = "none";
 });
+
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+
+

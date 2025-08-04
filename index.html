@@ -1,122 +1,140 @@
 <!DOCTYPE html>
-<<html lang="en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Mutesa's Farm</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div id="loader">
-  <div class="spinner"></div>
-</div>
+  <header class="hero">
+  <div class="hero-content">
+    <h1>Yonah and Dainess Farm</h1>
+    <p>Naturally Grown. Locally Loved.</p>
+  </div>
+</header>
 
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header -->
   <header>
     <h1>The Mutesa's Farm</h1>
     <p>Fresh Produce | Poultry | Livestock | Natural Goodness</p>
   </header>
 
-  <nav class="buttons">
-    <button onclick="scrollToSection('contact')">Contact Us</button>
-  <button onclick="scrollToSection('about')">About</button>
-  <button onclick="scrollToSection('products')">Products</button>
-  <button onclick="scrollToSection('gallery')">Gallery</button>
+  <!-- Navigation -->
+  <nav class="nav-buttons">
+    <button onclick="scrollToSection('about')">About</button>
+    <button onclick="scrollToSection('products')">Products</button>
+    <button onclick="scrollToSection('gallery')">Gallery</button>
+    <button onclick="scrollToSection('testimonials')">Testimonials</button>
+    <button onclick="scrollToSection('contact')">Contact</button>
   </nav>
 
-  <section id="contact" class="contact">
-     <h2>Contact Us</h2>
-  <form action="mailto:jonathanmutesa4@gmail.com" method="POST" enctype="text/plain">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Your Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-  <section id="about" class="about">
-    <h2>Welcome to The Mutesa's Farm!</h2>
-    <p>At The Mutesa's Farm, we are passionate about bringing farm-fresh produce and high-quality livestock straight from our land to your table. Whether it's crisp cabbages, juicy tomatoes, sweet strawberries, or healthy poultry and goats—we grow and raise everything with love and care.</p>
-    <p>We’re located in the green heart of 15 Miles, Chibombo, and we proudly serve families, markets, and businesses looking for nutritious, reliable, and affordable farm products.</p>
-    <p>Come and experience real Zambian farming — where tradition meets freshness.</p>
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About the Farm</h2>
+    <p>The Mutesa's Farm, located in the fertile heart of 15 Miles Chibombo,Zambia a family-owned farm dedicated to growing and raising healthy, sustainable produce and livestock. Our mission is to bring naturally grown vegetables, fruits, and well-raised poultry to homes and businesses across Zambia.</p>
+    <p>With deep roots in traditional farming methods and a love for the land, we provide only the freshest cabbages, tomatoes, onions, strawberries, goats, chickens, ducks, turkeys, and more. We take pride in ethical farming, where everything is cultivated with love and care. Whether you're buying for your family or a market, The Mutesa's Farm ensures quality and trust you can taste.</p>
   </section>
 
-  <section id="products" class="products">
+  <!-- Products -->
+  <section id="products" class="section">
   <h2>Our Products</h2>
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="images/cabbage.jpg" alt="Cabbage">
-      <h3>Cabbage</h3>
-      <p>Fresh, large-headed cabbage grown naturally.</p>
+  <div class="grid">
+    <div class="card">
+      <img src="images/goats.jpg" alt="Goat">
+      <h3>Goat</h3>
+      <p>Strong, healthy goats raised naturally on open pasture.</p>
     </div>
-    <div class="product-card">
-      <img src="images/tomato.jpg" alt="Tomato">
-      <h3>Tomatoes</h3>
-      <p>Juicy red tomatoes perfect for any meal.</p>
-    </div>
-    <div class="product-card">
-      <img src="images/chicken.jpg" alt="Chicken">
-      <h3>Chicken</h3>
-      <p>Healthy free-range village chickens.</p>
-    </div>
-    <div class="product-card">
-      <img src="images/strawberry.jpg" alt="Strawberry">
-      <h3>Strawberries</h3>
-      <p>Sweet and organic strawberries.</p>
-    </div>
-    <div class="product-card">
-      <img src="images/goats.jpg" alt="Goats">
-      <h3>Goats</h3>
-      <p>Strong goats raised with care and tradition.</p>
-    </div>
-  </div>
-</section>
-
-  <section id="gallery" class="gallery">
-    <h2>Farm Gallery</h2>
-    <div class="image-row">
-      <img src="images/cabbage.jpg" alt="Cabbage">
-      <img src="images/chicken.jpg" alt="Chicken">
-      <img src="images/strawberry.jpg" alt="Strawberry">
-      <img src="images/goats.jpg" alt="Goats">
-      <img src="images/eggs.jpg" alt="Eggs">
-      <img src="images/turkey.jpg" alt="Turkey">
-      <img src="images/tomato.jpg" alt="Tomato">
-      <img src="images/onion.jpg" alt="Onion">
+    <div class="card">
       <img src="images/duck.jpg" alt="Duck">
-      <img src="images/farm-view.jpg" alt="Farm-view">
-      <img src="images/farm-workers.jpg" alt="Farm-workers">
+      <h3>Duck</h3>
+      <p>Free-range ducks, perfect for delicious meals.</p>
+    </div>
+    <div class="card">
+      <img src="images/onion.jpg" alt="Onion">
+      <h3>Onion</h3>
+      <p>Freshly harvested onions with strong aroma and flavor.</p>
+    </div>
+    <div class="card">
+      <img src="images/tomato.jpg" alt="Tomato">
+      <h3>Tomato</h3>
+      <p>Juicy red tomatoes, rich in nutrients and taste.</p>
+    </div>
+    <div class="card">
+      <img src="images/eggs.jpg" alt="Eggs">
+      <h3>Eggs</h3>
+      <p>Organic eggs from happy, healthy chickens.</p>
+    </div>
+    <div class="card">
+      <img src="images/turkey.jpg" alt="Turkey">
+      <h3>Turkey</h3>
+      <p>Well-fed turkeys ideal for hearty meals and special occasions.</p>
+    </div>
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials">
-  <h2>What Our Customers Say</h2>
-  <div class="testimonial-card">
-    <p>"Freshest vegetables I've ever bought. Highly recommend!"</p>
-    <strong>- Chileshe M.</strong>
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <h2>Farm Gallery</h2>
+  <div class="grid gallery">
+    <img src="images/farm-workers.jpg" alt="Farm Workers">
+    <img src="images/farm-view.jpg" alt="Farm View">
+    <img src="images/strawberry.jpg" alt="Strawberry">
+    <img src="images/turkey.jpg" alt="Turkey">
+    <img src="images/tomato.jpg" alt="Tomato">
+    <img src="images/onion.jpg" alt="Onion">
+    <img src="images/cabbage.jpg" alt="Cabbage">
+    <img src="images/eggs.jpg" alt="Eggs">
   </div>
-  <div class="testimonial-card">
-    <p>"The chickens and goats are always healthy. A trustworthy farm."</p>
-    <strong>- Mwansa K.</strong>
-  </div>
-</section>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 The Mutesa's Farm. All rights reserved.</p>
-  <p>Call: ‪+260 974593760‬ / WhatsApp: ‪+260 973159152‬</p>
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-card">
+      <p>"I’ve never had tomatoes this fresh before. You can taste the difference!"</p>
+      <strong>- Bwalya M.</strong>
+    </div>
+    <div class="testimonial-card">
+      <p>"Highly recommended for fresh eggs and healthy goats. Very trustworthy farm."</p>
+      <strong>- Natasha C.</strong>
+    </div>
+    <div class="testimonial-card">
+      <p>"Their ducks and turkeys are always clean and well-fed. 5 stars!"</p>
+      <strong>- Chungu P.</strong>
+   <p>"The freshest vegetables I've ever tasted! The farm is truly amazing." – Jane D.</p>
+  </div>
+  <div class="testimonial">
+    <p>"I always buy my eggs and turkey from Yonah and Dainess. Great quality!" – Peter M.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Call: ‪+260 974 593 760‬</p>
+  <p>WhatsApp: ‪+260 973 159 152‬</p>
   <p>Email: <a href="mailto:jonathanmutesa4@gmail.com">jonathanmutesa4@gmail.com</a></p>
-</footer>
+<footer>
+    <form action="https://formspree.io/f/xjkoeqkw" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </footer>
 
+  <!-- Footer -->
+    <p>&copy; 2025 The Mutesa's Farm. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
 

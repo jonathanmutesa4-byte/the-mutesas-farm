@@ -255,3 +255,66 @@ footer {
   text-decoration: underline;
 }
 
+/* ======================= */
+/* Video + Ribbon Styling  */
+/* ======================= */
+:root{
+  /* Adjust to match your branding */
+  --brand: #0f766e;   /* deep teal */
+  --accent: #f59e0b;  /* amber */
+  --text-on-ribbon: #ffffff;
+}
+
+/* Promo ribbon bar (sticky announcement) */
+.promo-ribbon{
+  position: sticky; top: 0; z-index: 50;
+  display: flex; gap: .75rem; align-items: center; justify-content: center;
+  padding: .6rem 1rem; background: var(--brand); color: #fff; font-weight: 700;
+  text-align: center;
+}
+.promo-cta{ background:#fff; color:var(--brand); padding:.35rem .9rem; border-radius:9999px; text-decoration:none; font-weight:800; }
+.promo-cta:hover{ opacity:.9; }
+
+/* Section title with angled ribbon background */
+.section-title.section-ribbon{
+  position: relative; display: inline-block; padding: .5rem 1rem; margin-bottom: .75rem;
+  background: var(--accent); color: #111; border-radius: 0 .6rem .6rem 0;
+}
+.section-title.section-ribbon::before{
+  content:""; position:absolute; left:-1rem; top:0; bottom:0; width:1rem;
+  background: var(--accent); transform: skewX(-20deg); border-radius:.25rem 0 0 .25rem;
+}
+
+/* Video wrapper = responsive 16:9 box */
+.video-wrapper{ position:relative; width:100%; aspect-ratio:16/9; background:#000; overflow:hidden; border-radius:1rem; }
+.video-wrapper video{ width:100%; height:100%; object-fit:cover; display:block; border-radius:inherit; }
+
+/* Play/Pause toggle for the hero video */
+.video-toggle{ position:absolute; right:.75rem; bottom:.75rem; border:none; border-radius:9999px; padding:.5rem .8rem; background:rgba(255,255,255,.9); font-size:1rem; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,.15); }
+.video-toggle:hover{ transform: translateY(-1px); }
+
+/* Video cards grid */
+.video-grid{ display:grid; gap:1rem; }
+@media (min-width: 1024px){ .video-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 640px) and (max-width: 1023px){ .video-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px){ .video-grid{ grid-template-columns: 1fr; } }
+
+.video-card{ position:relative; background:#fff; border-radius:1rem; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,.06); }
+.video-card figcaption{ padding:.6rem .85rem; font-weight:600; }
+
+/* Corner ribbon badge (works on cards, images, videos) */
+.corner-ribbon{
+  width: 160px; position:absolute; top:12px; left:-40px; z-index:5;
+  text-align:center; line-height:32px; letter-spacing:.5px; font-weight:800; font-size:.85rem; text-transform:uppercase;
+  color: var(--text-on-ribbon); background:#ef4444; /* red */
+  transform: rotate(-45deg); box-shadow:0 4px 16px rgba(0,0,0,.2);
+}
+.corner-ribbon.top-right{ left:auto; right:-40px; transform: rotate(45deg); }
+.corner-ribbon.success{ background:#22c55e; } /* green */
+.corner-ribbon.info{ background:#3b82f6; }    /* blue */
+.corner-ribbon.warning{ background:#f59e0b; color:#111; } /* amber */
+
+/* Optional: ensure existing cards don't hide ribbons */
+.product-card, .video-card{ overflow:visible; }
+
+
